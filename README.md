@@ -1,9 +1,11 @@
 # EMAN Dépannage Plomberie
 
-Simple static site for EMAN Dépannage Plomberie.
+Site for developers: EMAN Dépannage Plomberie (static brochure site)
 
-Files:
-- `index.html` — main site
+Description:
+
+EMAN Dépannage Plomberie is a small static website that presents plumbing and emergency repair services for residential clients. The site is intentionally minimal and built with plain HTML and CSS to make deployment and maintenance simple.
+
+File layout (root):
+- `index.html` — main page and contact form
 - `style.css` — styles
-
-This repository is initialized locally. To push to a remote, add a remote and run `git push -u origin main`.
