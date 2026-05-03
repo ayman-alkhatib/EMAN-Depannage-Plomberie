@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="EMAN Dépannage Plomberie, plombier professionnel pour dépannage rapide, installation et petits travaux de plomberie. Devis gratuit et intervention rapide.">
-  <title>EMAN Dépannage Plomberie</title>
+  <meta name="keywords" content="plombier, dépannage plomberie, réparation fuite d'eau, installation chauffe-eau, remplacement WC, robinetterie, petits travaux plomberie, urgence plomberie">
+  <meta name="author" content="EMAN Dépannage Plomberie">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="EMAN Dépannage Plomberie - Plombier professionnel pour dépannage rapide et installation">
+  <meta property="og:description" content="EMAN Dépannage Plomberie, votre spécialiste en dépannage rapide et efficace. Nous garantissons un service basé sur l’efficacité, la maîtrise, l’assurance et le nettoyage. Intervention rapide, travail soigné et satisfaction client au cœur de nos priorités.">
+  <title>EMAN Dépannage Plomberie | Dépannage Plomberie Rapide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +36,12 @@
         </ul>
       </nav>
     </div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <main id="contenu">
@@ -171,7 +182,7 @@
           <a class="contact-mail" href="mailto:emandepannagetop@gmail.com">emandepannagetop@gmail.com</a>
         </div>
 
-        <form class="contact-form" action="https://formspree.io/f/xykozjkb" method="POST">
+        <form class="contact-form" action="https://formsubmit.co/3a4b3dd44580c968bda07f267c10139c" method="POST">
           <div class="form-group">
             <label for="nom">Nom</label>
             <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
@@ -191,7 +202,9 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin" required></textarea>
           </div>
-
+          
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://emandpannageplomberie.fr/thanks.html">
           <button class="btn btn-primary btn-full" type="submit">Envoyer la demande</button>
         </form>
       </div>
@@ -204,5 +217,23 @@
       <p>Intervention rapide, travail impeccable</p>
     </div>
   </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const siteNav = document.querySelector('.site-nav');
+    const navLinks = document.querySelectorAll('.site-nav a');
+
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenuBtn.classList.toggle('active');
+      siteNav.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenuBtn.classList.remove('active');
+        siteNav.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>
